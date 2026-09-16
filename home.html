@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <!-- Cấu hình cơ bản -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đôi Lời Từ Văn Đạt</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/home.css">
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- NHẠC NỀN -->
+    <!-- ===================== -->
+    <audio id="bgMusic" loop>
+        <source src="./img/NgayRoiChuyenBay.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Nút bật/tắt nhạc -->
+    <button id="musicBtn">
+        🎵 Bật nhạc ở đây nè
+        nghe cho nó chill
+    </button>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-card">
+
+            <!-- Ảnh đại diện -->
+            <img
+                src="./img/anh.jpg"
+                alt="Bé Hương"
+                class="hero-img">
+
+            <!-- Tiêu đề -->
+            <h1>Tặng Huỳnh Hương 🌸</h1>
+
+            <!-- Lời mở đầu -->
+            <p>
+                Nếu Hương đang đọc những dòng này,
+                thì chắc chỉ còn một thời gian ngắn nữa thôi là bà sẽ bắt đầu hành trình mới ở Nhật.
+
+                Tui không biết nên tặng Hương món quà gì.
+
+                Nên tui làm một trang web nhỏ này,
+                để viết ra lời tạm biệt gửi Hương.
+            </p>
+
+            <p>
+                <h3>Ký tên</h3> <p></p>
+                <i><h4>Văn Đạt</h4></i>
+            </p>
+
+            <!-- Nút cuộn xuống -->
+            <a href="#letter" class="btn">
+                Ấn vào đây để đọc lời gửi của tui 🌸
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- COUNTDOWN SECTION -->
+    <section>
+
+        <h2 class="title">
+            ⏳ Đếm Ngược Đến Hành Trình Mới ⏳
+        </h2>
+
+        <div class="countdown">
+
+            <div class="box">
+                <span id="days">0</span>
+                <span>Ngày</span>
+            </div>
+
+            <div class="box">
+                <span id="hours">0</span>
+                <span>Giờ</span>
+            </div>
+
+            <div class="box">
+                <span id="minutes">0</span>
+                <span>Phút</span>
+            </div>
+
+            <div class="box">
+                <span id="seconds">0</span>
+                <span>Giây</span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- LỜI NHẮN -->   
+    <section id="letter">
+
+        <h2 class="title">
+            💌 Những Điều Tui Muốn Nói  💌
+        </h2>
+
+        <!-- Card 1 -->
+        <div class="card reveal">
+            <h2>🌷 Cảm Ơn</h2>
+            <p>
+                Cảm ơn Hương vì những lần trò chuyện,
+                những tiếng cười và những kỷ niệm mà tui sẽ luôn nhớ.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card reveal">
+            <h2>✈️ Chuyến Đi Mới</h2>
+            <p>
+                Nhật Bản sẽ là nơi bắt đầu cho rất nhiều điều mới mẻ.
+
+                Tui mong bà sẽ gặp được những người tốt,
+                có những trải nghiệm đẹp
+                và đạt được những điều mình mong muốn.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card reveal">
+            <h2>🌸 Nếu Có Ngày Buồn</h2>
+            <p>
+                Nếu có một ngày nào đó bà cảm thấy mệt,
+                cảm thấy nhớ nhà hay cô đơn,
+
+                hãy nhớ ở Việt Nam vẫn có Văn Đạt luôn mong bà bình an.
+            </p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card reveal">
+            <h2>💖 Lời Chúc</h2>
+            <p>
+                Chúc bà luôn mạnh khỏe.
+
+                Chúc mọi dự định của bà đều thuận lợi.
+
+                Chúc những ước mơ của bà sẽ dần trở thành hiện thực.
+
+                Và chúc bà luôn giữ nụ cười thật tươi.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <section class="footer">
+
+        <h2>🌸 Hẹn Gặp Lại Nhé 🌸</h2>
+
+        <p>
+            <h3>Đây không phải là lời tạm biệt.
+
+            Chỉ là một lời chúc cho hành trình mới của Hương.
+
+            Từ Việt Nam,
+            tui vẫn luôn mong những điều tốt đẹp nhất sẽ đến với Hương.
+
+            💗
+            </h3>
+            <br><br>
+
+        </p>
+
+    </section>
+    
+    <!-- JAVASCRIPT -->
+    <script src="./js/home.js"></script>
+
+</body>
+
+</html>

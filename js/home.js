@@ -121,69 +121,39 @@ document.querySelectorAll(".reveal")
 });
 
 
+
 /* =========================
-   NHẠC
+   MỞ THIỆP
 ========================= */
 
-const music = document.getElementById("bgMusic");
-const musicBtn = document.getElementById("musicBtn");
+document.body.classList.add("waiting");
 
-let isPlaying = false;
+const intro =
+document.getElementById("letterIntro");
 
-musicBtn.addEventListener("click", () => {
+const openBtn =
+document.getElementById("openLetterBtn");
 
-    if (!isPlaying) {
+const music =
+document.getElementById("bgMusic");
 
-        music.play()
-            .then(() => {
+openBtn.addEventListener("click", () => {
 
-                isPlaying = true;
+    music.play()
+    .catch(error => {
+        console.log(error);
+    });
 
-                musicBtn.innerHTML =
-                    "🔇 Tắt nhạc";
+    intro.classList.add("hide");
 
-            })
-            .catch((error) => {
+    setTimeout(() => {
 
-                console.log(error);
+        document.body.classList.remove("waiting");
+        document.body.classList.add("ready");
 
-                alert("Không thể phát nhạc.");
-
-            });
-
-    } else {
-
-        music.pause();
-
-        isPlaying = false;
-
-        musicBtn.innerHTML =
-            "🎵 Bật nhạc ở đây nè<br>nghe cho nó chill";
-
-    }
+    }, 500);
 
 });
 
 
-/* =========================
-   PHÁT NHẠC KHI CLICK LẦN ĐẦU
-========================= */
 
-document.addEventListener("click", () => {
-
-    if (!isPlaying) {
-
-        music.play()
-            .then(() => {
-
-                isPlaying = true;
-
-                musicBtn.innerHTML =
-                    "🔇 Không mún chill thì tắt nhạc";
-
-            })
-            .catch(() => { });
-
-    }
-
-}, { once: true });

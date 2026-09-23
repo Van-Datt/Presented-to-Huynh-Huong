@@ -5,106 +5,273 @@
 }
 
 body{
-    height:100vh;
+    font-family:'Quicksand',sans-serif;
     overflow:hidden;
+    height:100vh;
+    background:
+    linear-gradient(135deg,#ffd6e8,#ffc1d9,#ffe6f1);
+}
+
+/* ===== CỬA ===== */
+
+#intro{
+    position:fixed;
+    inset:0;
+    z-index:9999;
+}
+
+.door{
+    position:absolute;
+    top:0;
+    width:50%;
+    height:100%;
+    background-size:cover;
+    background-repeat:no-repeat;
+    transition:2.5s cubic-bezier(.22,1,.36,1);
+}
+
+.left{
+    left:0;
+    background-image:url("../img/trai.png");
+    background-position:right center;
+}
+
+.right{
+    right:0;
+    background-image:url("../img/phai.png");
+    background-position:left center;
+}
+
+#intro.open .left{
+    transform:translateX(-100%);
+}
+
+#intro.open .right{
+    transform:translateX(100%);
+}
+
+/* ===== NÚT MỞ KHÓA ===== */
+
+#unlockBtn{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+
+    width:80px;
+    height:80px;
+
+    border:none;
+    border-radius:50%;
+
+    background:
+    linear-gradient(135deg,#ff89b4,#ff4f95);
+
+    color:white;
+
+    font-size:30px;
+    cursor:pointer;
+
+    box-shadow:
+    0 0 20px rgba(255,255,255,.8),
+    0 0 40px rgba(255,105,180,.7);
+
+    z-index:10000;
+}
+
+#unlockBtn:hover{
+    transform:translate(-50%,-50%) scale(1.1);
+}
+
+/* ===== MODAL ===== */
+
+#passwordModal{
+    position:fixed;
+    inset:0;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    z-index:20000;
+}
+
+#passwordModal.show{
+    display:flex;
+}
+
+.password-box{
+    width:min(90%,380px);
+
+    background:white;
+
+    padding:30px;
+    border-radius:25px;
+
+    text-align:center;
+
+    box-shadow:0 10px 40px rgba(0,0,0,.15);
+}
+
+.password-box h2{
+    color:#e63c86;
+    margin-bottom:10px;
+}
+
+.password-box p{
+    color:#666;
+}
+
+.password-input{
+    position:relative;
+    margin-top:20px;
+}
+
+.password-input input{
+    width:100%;
+    padding:14px 50px 14px 15px;
+
+    border:2px solid #ffd0e2;
+    border-radius:50px;
+
+    outline:none;
+}
+
+.password-input input:focus{
+    border-color:#ff4f95;
+}
+
+#togglePassword{
+    position:absolute;
+    right:12px;
+    top:50%;
+    transform:translateY(-50%);
+
+    border:none;
+    background:none;
+    cursor:pointer;
+}
+
+#passwordError{
+    min-height:25px;
+    color:#d63384;
+    margin-top:10px;
+}
+
+#confirmPassword{
+    margin-top:10px;
+
+    border:none;
+    padding:12px 30px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(135deg,#ff89b4,#ff4f95);
+
+    color:white;
+    cursor:pointer;
+}
+
+/* ===== NỘI DUNG ===== */
+
+#mainContent{
+    width:100%;
+    height:100vh;
+
     display:flex;
     justify-content:center;
     align-items:center;
-    background:linear-gradient(135deg,#ffd6e8,#ffc1d9,#ffe6f1);
-    font-family:'Quicksand',sans-serif;
+
+    opacity:0;
+    transition:2s;
+}
+
+#mainContent.show{
+    opacity:1;
 }
 
 .container{
     text-align:center;
-    color:white;
-    z-index:2;
+    padding:20px;
 }
 
 h1{
     font-family:'Dancing Script',cursive;
+    color:#e63c86;
     font-size:5rem;
     margin-bottom:20px;
-    animation:fadeUp 1.5s ease;
-    color:#e63c86;
 }
 
-p{
-    font-size:1.2rem;
-    margin-bottom:20px;
-    animation:fadeUp 2s ease;
+.container p{
     color:#4f4454;
+    font-size:1.2rem;
+    margin-bottom:25px;
 }
 
-input{
-    width:280px;
-    padding:14px;
+#startBtn{
     border:none;
-    border-radius:50px;
-    outline:none;
-    text-align:center;
-    font-size:16px;
-    margin-bottom:15px;
-}
 
-input::placeholder{
-    color:#999;
-}
-
-#errorMsg{
-    min-height:40px;
-    color:#d63384;
-    font-size:15px;
-    font-weight:600;
-    margin-bottom:10px;
-}
-
-button{
-    border:none;
     background:white;
     color:#ff4f95;
+
     padding:15px 40px;
+
     border-radius:50px;
+
     font-size:18px;
     font-weight:bold;
+
     cursor:pointer;
-    transition:.3s;
 }
 
-button:hover{
-    transform:scale(1.08);
-}
+/* ===== HOA ĐÀO ===== */
 
 .flower{
     position:absolute;
-    top:-20px;
-    animation:fall linear forwards;
+    top:-30px;
     pointer-events:none;
+    animation:fall linear forwards;
 }
 
 @keyframes fall{
-    to{
-        transform:translateY(110vh) rotate(360deg);
-        opacity:0;
-    }
-}
 
-@keyframes fadeUp{
     from{
-        opacity:0;
-        transform:translateY(30px);
-    }
-    to{
+        transform:translateY(0) rotate(0deg);
         opacity:1;
-        transform:translateY(0);
+    }
+
+    to{
+        transform:
+        translateY(110vh)
+        translateX(120px)
+        rotate(360deg);
+
+        opacity:0;
     }
 }
 
-.fadeOut{
-    animation:fadeOut 1s forwards;
-}
+/* ===== MOBILE ===== */
 
-@keyframes fadeOut{
-    to{
-        opacity:0;
+@media(max-width:768px){
+
+    h1{
+        font-size:3rem;
+    }
+
+    .container p{
+        font-size:1rem;
+    }
+
+    #unlockBtn{
+        width:70px;
+        height:70px;
+        font-size:24px;
+    }
+
+    #startBtn{
+        padding:12px 30px;
     }
 }

@@ -9,36 +9,76 @@
 <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/index.css">
-
 </head>
+
 <body>
 
 <audio id="bgMusic">
-    <source src="audio/NgayRoiChuyenBay.mp3" type="audio/mpeg">
+    <source src="./img/naruto-main-theme_WWNB6pAx.mp3" type="audio/mpeg">
 </audio>
 
-<div class="container">
+<div id="intro">
 
-    <h1>Gửi Tặng Huỳnh Hương 🌸</h1>
+    <div class="door left"></div>
+    <div class="door right"></div>
 
-    <p>
-        Có một món quà nhỏ đang chờ bà phía sau...
-        <br>
-        Từ Văn Đạt 
-    </p>
-
-    <input
-        type="password"
-        id="password"
-        placeholder="Nhập mật khẩu "
-        maxlength="8"
-    >
-
-    <p id="errorMsg"></p>
-
-    <button id="startBtn">
-         Bắt Đầu
+    <button id="unlockBtn">
+        Mở
     </button>
+
+</div>
+
+
+<div id="passwordModal">
+
+    <div class="password-box">
+
+        <h2>🌸 Đang Khóa 🌸</h2>
+
+        <p>Nhập sai ăn bọp tay</p>
+
+        <div class="password-input">
+
+            <input
+                type="password"
+                id="doorPassword"
+                placeholder="Mật khẩu"
+            >
+
+            <button id="togglePassword">
+                👁
+            </button>
+
+        </div>
+
+        <p id="passwordError"></p>
+
+        <button id="confirmPassword">
+            Mở Cửa
+        </button>
+
+    </div>
+
+</div>
+
+
+<div id="mainContent">
+
+    <div class="container">
+
+        <h1>🌸Tạm Biệt Huỳnh Hương 🌸</h1>
+
+        <p>
+            Có một món quà nhỏ đang chờ bà phía sau...
+            <br>
+            Từ Văn Đạt
+        </p>
+
+        <button id="startBtn">
+            Bắt Đầu
+        </button>
+
+    </div>
 
 </div>
 

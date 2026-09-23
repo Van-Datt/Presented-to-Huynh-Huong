@@ -2,49 +2,65 @@
 <html lang="vi">
 
 <head>
-    <!-- Cấu hình cơ bản -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Đôi Lời Từ Văn Đạt</title>
 
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
-    <!-- CSS -->
     <link rel="stylesheet" href="./css/home.css">
 </head>
 
 <body>
 
-    <!-- ===================== -->
-    <!-- NHẠC NỀN -->
-    <!-- ===================== -->
     <audio id="bgMusic" loop>
-        <source src="./img/NgayRoiChuyenBay.mp3" type="audio/mpeg">
+        <source src="./img/Gió (Remix).mp3" type="audio/mpeg">
     </audio>
 
-    <!-- Nút bật/tắt nhạc -->
-    <button id="musicBtn">
-        🎵 Bật nhạc ở đây nè
-        nghe cho nó chill
-    </button>
+   <div id="letterIntro">
 
-    <!-- HERO SECTION -->
+    <div class="envelope">
+
+        <div class="seal">
+            🌸
+        </div>
+
+        <div class="photo-frame">
+    <img
+        src="./img/anhh.png"
+        alt="Huỳnh Hương"
+        class="letter-img"
+    >
+</div>
+
+        <h2>Gửi Tới Huỳnh Hương</h2>
+
+        <p>
+            🌸Có một bức thư  
+            đang chờ Hương mở...🌸
+        </p>
+
+        <button id="openLetterBtn">
+             Mở 
+        </button>
+
+    </div>
+
+</div>
+</div>
+
     <section class="hero">
 
         <div class="hero-card">
 
-            <!-- Ảnh đại diện -->
             <img
                 src="./img/anh.jpg"
                 alt="Bé Hương"
                 class="hero-img">
 
-            <!-- Tiêu đề -->
-            <h1>Tặng Huỳnh Hương 🌸</h1>
+            <h1> Huỳnh Hương </h1>
 
-            <!-- Lời mở đầu -->
             <p>
                 Nếu Hương đang đọc những dòng này,
                 thì chắc chỉ còn một thời gian ngắn nữa thôi là bà sẽ bắt đầu hành trình mới ở Nhật.
@@ -60,16 +76,14 @@
                 <i><h4>Văn Đạt</h4></i>
             </p>
 
-            <!-- Nút cuộn xuống -->
             <a href="#letter" class="btn">
-                Ấn vào đây để đọc lời gửi của tui 🌸
+                Ấn vào đây để đọc lời gửi của tui 
             </a>
 
         </div>
 
     </section>
 
-    <!-- COUNTDOWN SECTION -->
     <section>
 
         <h2 class="title">
@@ -101,15 +115,13 @@
         </div>
 
     </section>
-
-    <!-- LỜI NHẮN -->   
+  
     <section id="letter">
 
         <h2 class="title">
             💌 Những Điều Tui Muốn Nói  💌
         </h2>
 
-        <!-- Card 1 -->
         <div class="card reveal">
             <h2>🌷 Cảm Ơn</h2>
             <p>
@@ -118,7 +130,6 @@
             </p>
         </div>
 
-        <!-- Card 2 -->
         <div class="card reveal">
             <h2>✈️ Chuyến Đi Mới</h2>
             <p>
@@ -130,7 +141,6 @@
             </p>
         </div>
 
-        <!-- Card 3 -->
         <div class="card reveal">
             <h2>🌸 Nếu Có Ngày Buồn</h2>
             <p>
@@ -141,7 +151,6 @@
             </p>
         </div>
 
-        <!-- Card 4 -->
         <div class="card reveal">
             <h2>💖 Lời Chúc</h2>
             <p>
@@ -157,7 +166,6 @@
 
     </section>
 
-    <!-- FOOTER -->
     <section class="footer">
 
         <h2>🌸 Hẹn Gặp Lại Nhé 🌸</h2>
@@ -170,7 +178,7 @@
             Từ Việt Nam,
             tui vẫn luôn mong những điều tốt đẹp nhất sẽ đến với Hương.
 
-            💗
+            
             </h3>
             <br><br>
 
@@ -178,7 +186,6 @@
 
     </section>
     
-    <!-- JAVASCRIPT -->
     <script src="./js/home.js"></script>
 
 </body>
